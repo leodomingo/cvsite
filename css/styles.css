@@ -161,6 +161,11 @@ a:hover, a:active, a:visited
 {
     text-align: left;
 }
+.inlineNavLinks li
+{
+    display: inline;
+    margin-right: 2vw;
+}
 .arrowHolder
 {
     position: absolute;

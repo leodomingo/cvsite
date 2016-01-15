@@ -4,18 +4,27 @@
 
 $(function(){ // document ready
 
+    // initialization: Hidding and setting Variable Arrays
+
+
     var buttons = [$('#aboutMeButton'), $('#myPhotoButton'), $('#hireMeButton')];
     var sections = [$('#aboutMe'), $('#myPhotos'),$('#hireMe')];
     var testHeight = $(window).height();
-
+    $('#content').hide();
     $.each(sections, function()
     {
         this.hide();
     });
 
-    $( window ).resize(function() {
+
+
+    $( window ).resize(function() { // sets when the Navlinks should fix to the top of the viewport
         testHeight = $(window).height();
     });
+
+    //////////////////////////////////////
+    /////// affix navlinks //////////////
+    /////////////////////////////////////
 
     $(window).scroll(function(){ // scroll event
 
@@ -24,14 +33,18 @@ $(function(){ // document ready
         if (windowTop >= testHeight) {
             $('.sidebar').css({ position: 'fixed', top: 0 });
             $('.contentPane').addClass("col-md-offset-3");
-
         }
+
         else {
             $('.sidebar').css({position:'relative'});
             $('.contentPane').css({ position: 'relative'}).removeClass("col-md-offset-3");
         }
 
     });
+
+    ////////////////////////////////////////////////////////
+    /////////////////////Button Actions/////////////////////
+    ////////////////////////////////////////////////////////
 
     $('#myPhotoButton').click(function(event){  // Photos event
         event.preventDefault();
