@@ -66,6 +66,7 @@ a:hover, a:active, a:visited
     top: 50%;
     transform: translateY(-50%);
 }
+
 .contentPanel
 {
     height: 100%;
@@ -85,19 +86,6 @@ a:hover, a:active, a:visited
     z-index: 1000;
 }
 
-.headerImg
-{
-    font-family:"Adobe Garamond Pro Bold";
-    text-align: center;
-    line-height: 5vh;
-    font-size: 5vh;
-    color: white;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    padding: 20px;
-}
 
 .imgItem
 {
@@ -108,18 +96,19 @@ a:hover, a:active, a:visited
     color: white;
     position: relative;
     top: 50%;
+    width: 100%;
     transform: translateY(-50%);
     overflow: hidden;
     padding: 20px;
     height:85%;
-    width: 85%;
+
+
 }
 
 .imgItem img
 {
     max-height: 100%;
-    max-width: 100%;
-    text-align: center;
+    max-width: 85%;
 }
 
 .description
@@ -128,10 +117,10 @@ a:hover, a:active, a:visited
     line-height: 5vh;
     font-size: 5vh;
     color: white;
-    width: 50%;
+    width: 100%;
+    padding-left: 25%;
+    padding-right: 25%;
     text-align: center;
-    margin-left: 25%;
-    margin-right: 25%;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -155,11 +144,18 @@ a:hover, a:active, a:visited
     height: 100%;
     margin: 0;
     overflow: hidden;
+
 }
 
 .navlinks
 {
     text-align: left;
+}
+.inlineNavLinks
+{
+    position: absolute;
+    top: 70%;
+    width: 100%;
 }
 .inlineNavLinks li
 {

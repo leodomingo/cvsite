@@ -4,26 +4,36 @@
 
 $(function(){ // document ready
 
-    // initialization: Hidding and setting Variable Arrays
+    $.scrollify({
+        section: ".item",
+        easing: "easeOutExpo",
+        scrollSpeed: 1100,
+        offset : 0,
+        scrollbars: false
+    });
+
+
+    // initialization: Hiding Content and setting Variable Arrays
 
 
     var buttons = [$('#aboutMeButton'), $('#myPhotoButton'), $('#hireMeButton')];
     var sections = [$('#aboutMe'), $('#myPhotos'),$('#hireMe')];
     var testHeight = $(window).height();
     $('#content').hide();
+    $('.arrowHolder').hide();
     $.each(sections, function()
     {
         this.hide();
     });
 
-
-
-    $( window ).resize(function() { // sets when the Navlinks should fix to the top of the viewport
+    $( window ).resize(function() { // sets when the navLinks should fix to the top of the viewport
         testHeight = $(window).height();
     });
 
+
+
     //////////////////////////////////////
-    /////// affix navlinks //////////////
+    /////// affix navLinks //////////////
     /////////////////////////////////////
 
     $(window).scroll(function(){ // scroll event
@@ -41,6 +51,29 @@ $(function(){ // document ready
         }
 
     });
+
+    ///////////////////////////////////////////
+    /////////inlineNavLink Action /////////////
+    ///////////////////////////////////////////
+
+
+ $('.inlineNavLinks a').each(function(index){
+     $(this).click(function(event){
+         event.preventDefault();
+         $('#content').show();
+         $('.inlineNavLinks').fadeOut(1000, function(){
+             $('.arrowHolder').fadeIn(1000, function(){
+                 $('html, body').animate({
+                     scrollTop: testHeight }, 500);
+             });
+         });
+
+         sections[index].fadeIn(850);
+
+         buttons[index].css({"text-decoration": "line-through"});
+     });
+ });
+
 
     ////////////////////////////////////////////////////////
     /////////////////////Button Actions/////////////////////
@@ -68,6 +101,8 @@ $(function(){ // document ready
         $('#aboutMe').fadeIn(250);
         $('#aboutMeButton').css({"text-decoration": "line-through"})
     });
+
+
 
 
 });
