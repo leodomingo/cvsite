@@ -32,6 +32,10 @@ ul
     font-size: 2vw;
     text-decoration: none;
 }
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
 
 a:hover, a:active, a:visited
 {
