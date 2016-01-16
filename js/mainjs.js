@@ -16,8 +16,8 @@ $(function(){ // document ready
     // initialization: Hiding Content and setting Variable Arrays
 
 
-    var buttons = [$('#aboutMeButton'), $('#myPhotoButton'), $('#hireMeButton')];
-    var sections = [$('#aboutMe'), $('#myPhotos'),$('#hireMe')];
+    var buttons = [$('#aboutMeButton'), $('#myPhotoButton'), $('#test1Button'), $('#hireMeButton'),$('#test3Button')];
+    var sections = [$('#aboutMe'), $('#myPhotos'),$('#test1'),$('#hireMe'),$('#test3')];
     var testHeight = $(window).height();
     $('#content').hide();
     $('.arrowHolder').hide();
@@ -99,7 +99,19 @@ $(function(){ // document ready
             this.hide();
         });
         $('#aboutMe').fadeIn(250);
-        $('#aboutMeButton').css({"text-decoration": "line-through"})
+        $('#aboutMeButton').css({"text-decoration": "line-through",
+                                "color":"#ffffff"})
+    });
+
+    $('#hireMeButton').click(function(event){  // about me event
+        event.preventDefault();
+        $('.navlinks li').find('a').css({"text-decoration": "none"});
+        $.each(sections, function() {
+            this.hide();
+        });
+        $('#hireMe').fadeIn(250);
+        $('#hireMeButton').css({"text-decoration": "line-through",
+            "color":"#ffffff"})
     });
 
 
