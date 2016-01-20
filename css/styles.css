@@ -15,7 +15,7 @@ body
     background: linear-gradient(
             rgba(0, 0, 0, 0.2),
             rgba(0, 0, 0, 0.2)),
-    url("../img/mafilm.jpg") fixed;
+    url("../img/pafilm.jpg") fixed;
     background-size: cover;
     background-position: center;
     overflow: visible;
@@ -54,6 +54,20 @@ a:hover, a:active, a:visited
     margin:0;
     padding:0;
     text-align: center;
+}
+.topPage
+{
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)),
+    url("../img/mafilm.jpg")no-repeat scroll;
+    background-size: cover;
+    background-position: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .homepage
@@ -154,6 +168,16 @@ a:hover, a:active, a:visited
 .navlinks
 {
     text-align: left;
+}
+
+.paFilm
+{
+    text-align: left;
+    font-family: "Adobe Garamond Pro Bold";
+    font-size: 2vw;
+    color: white;
+    position: absolute;
+    bottom: 0;
 }
 .inlineNavLinks
 {

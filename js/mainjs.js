@@ -4,14 +4,6 @@
 
 $(function(){ // document ready
 
-    $.scrollify({
-        section: ".item",
-        easing: "easeOutExpo",
-        scrollSpeed: 1100,
-        offset : 0,
-        scrollbars: false
-    });
-
 
     // initialization: Hiding Content and setting Variable Arrays
 
